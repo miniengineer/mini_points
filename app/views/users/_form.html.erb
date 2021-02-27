@@ -1,8 +1,13 @@
-<h1>hello world</h1>
-<%= form_with model: @user do |form| %>
+<div>
+  <h1>hello world</h1>
+  <%= render 'shared/errors', obj: @user %>
+  <%= form_with model: @user do |form| %>
   <%= form.label :username, "Username" %>
-  <%= form.text_field :username %>
-  <%= form.label :password_field, "Password" %>
-  <%= form.password_field :password %>
+  <%= form.text_field :username, placeholder: "Enter a username" %>
+  <%= form.label :email, "Email" %>
+  <%= form.email_field :email, placeholder: "Enter your email address" %>
+  <%= form.label :password, "Password" %>
+  <%= form.password_field :password, placeholder: "Choose a password" %>
   <%= form.submit %>
-<% end %>
+  <% end %>
+</div>
