@@ -1,7 +1,7 @@
+<%= render 'shared/errors', obj: @user %>
+
 <div>
-  <h1>hello world</h1>
-  <%= render 'shared/errors', obj: @user %>
-  <%= form_with model: @user do |form| %>
+  <%= form_for(@user) do |form| %>
   <%= form.label :username, "Username" %>
   <%= form.text_field :username, placeholder: "Enter a username" %>
   <%= form.label :email, "Email" %>
