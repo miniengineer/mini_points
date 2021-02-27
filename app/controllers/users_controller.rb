@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "Welcome to Mini Points!"
-      redirect_to users_path
+      redirect_to user_path(@user)
     else
       render 'new'
     end
