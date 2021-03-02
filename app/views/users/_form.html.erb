@@ -3,11 +3,11 @@
 <div>
   <%= form_for(@user) do |form| %>
   <%= form.label :username, "Username" %>
-  <%= form.text_field :username, placeholder: "Enter a username" %>
+  <%= form.text_field :username, placeholder: "Enter a username" %><br />
   <%= form.label :email, "Email" %>
-  <%= form.email_field :email, placeholder: "Enter your email address" %>
+  <%= form.email_field :email, placeholder: "Enter your email address" %><br />
   <%= form.label :password, "Password" %>
-  <%= form.password_field :password, placeholder: "Choose a password" %>
+  <%= form.password_field :password, placeholder: "Choose a password" %><br />
   <%= form.submit "Sign up" %>
   <% end %>
 </div>
