@@ -8,6 +8,6 @@
   <%= form.email_field :email, placeholder: "Enter your email address" %><br />
   <%= form.label :password, "Password" %>
   <%= form.password_field :password, placeholder: "Choose a password" %><br />
-  <%= form.submit "Sign up" %>
+  <%= form.submit(@user.new_record? ? "Sign up" : "Update") %>
   <% end %>
 </div>
