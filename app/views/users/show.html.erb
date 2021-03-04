@@ -1,3 +1,13 @@
-<h2><%= @user.username %>'s profile</h2>
+<h1><%= @user.username %>'s profile</h1>
 
 <%= gravatar_for @user, size: 200 %>
+
+<h3><%= @user.username %>'s account</h3>
+
+<% if @user.account.present? %>
+  <%= @user.account %>
+<% else %>
+<p>You don't have an account yet</p>
+<button>Create account</button>
+<%= link_to "Logout", root_path %>
+<% end %>
