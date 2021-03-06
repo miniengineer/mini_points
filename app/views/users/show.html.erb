@@ -7,7 +7,7 @@
 <% if @user.account.present? %>
   <%= @user.account %>
 <% else %>
-<p>You don't have an account yet</p>
-<button>Create account</button>
-<%= link_to "Logout", root_path %>
+  <p>You don't have an account yet</p>
+  <button>Create account</button>
+  <%= link_to "Logout", root_path %>
 <% end %>
