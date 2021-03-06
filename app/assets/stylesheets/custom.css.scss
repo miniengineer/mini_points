@@ -7,3 +7,28 @@
 h1 {
   color: #957DAD;
 }
+
+.homepage-header {
+  color: #FDF6EA;
+}
+
+.jumbotron {
+  background-image: asset-url('homepage-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
