@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "Welcome to Mini Points!"
+      @user.create_account
       redirect_to user_path(@user)
     else
       render 'new'
