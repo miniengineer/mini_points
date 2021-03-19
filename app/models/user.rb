@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   before_save { self.email = email.downcase }
 
-  has_one :account
+  has_one :account, dependent: :destroy
 
   validates :username, presence: true,
             uniqueness: { case_sensitive: false },
