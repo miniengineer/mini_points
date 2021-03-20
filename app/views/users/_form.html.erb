@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10">
-      <%= form_for(@user, class: "shadow p-3 mb-5 mt-2 bg-light rounded") do |form| %>
+      <%= form_with(model: @user, local: true, class: "shadow p-3 mb-5 mt-2 bg-light rounded") do |form| %>
         <div class="form-group row">
           <%= form.label :username, "Username", class: "col-2 col-form-label" %>
           <div class="col-10">
@@ -28,7 +28,7 @@
       <div class="form-group row" align="center">
         <div class="col-12">
           <%= form.submit(@user.new_record? ? "Sign up" : "Update", class: "btn btn-outline-primary ") %>
-          <%= link_to "Cancel and go back", user_path, class: "btn btn-outline-danger" %>
+          <%= link_to "Cancel and go back", root_path, class: "btn btn-outline-danger" %>
         </div>
       </div>
     </div>
