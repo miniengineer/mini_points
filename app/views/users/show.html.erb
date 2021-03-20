@@ -14,5 +14,5 @@
 
   <p>You have <%= @user.account.balance %> points</p>
 
-  <%= link_to "Logout", root_path %>
+  <%= link_to "Logout", logout_path, method: :delete %>
 </div>
