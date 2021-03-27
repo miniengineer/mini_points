@@ -11,7 +11,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:notice] = "Welcome to Mini Points!"
+      session[:user_id] = @user.id
+      flash[:notice] = "Welcome to Mini Points, #{@user.username}!"
       @user.create_account
       redirect_to user_path(@user)
     else
